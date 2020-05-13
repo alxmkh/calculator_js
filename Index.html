@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap-4.0.0-dist/css/bootstrap.min.css">
+
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+
+    <!-- My css-->
+    <link href="css/style.css" rel="stylesheet">
+
+    <title>Calculator</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row justify-content-md-center pt-4 h1">
+            <span class="customHeader">Calculator</span>
+        </div>
+        <!-- output line -->
+        <div class="row justify-content-md-center pt-5">
+            <div class="input-group col-4 well">
+                <small class = "form-text" id="allInput"></small>
+                <input class="output" type="text" aria-label="Last name" 
+                class="form-control form-control-lg" disabled
+                    value="" id="outputLine">
+                
+            </div>
+        </div>
+        <!-- Buttons: C, delete, /, *-->
+        <div class="row justify-content-md-center pt-4">
+            <div class="col-2"><button class="btn btn-block btn-danger allBtn" id="bClear">C</button></div>
+            <div class="col-1"><button class="btn btn-block btn-default allBtn" id="bBackspace">
+                    <svg class="bi bi-arrow-left" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M5.854 4.646a.5.5 0 010 .708L3.207 8l2.647 2.646a.5.5 0 01-.708.708l-3-3a.5.5 0 010-.708l3-3a.5.5 0 01.708 0z"
+                            clip-rule="evenodd" />
+                        <path fill-rule="evenodd" d="M2.5 8a.5.5 0 01.5-.5h10.5a.5.5 0 010 1H3a.5.5 0 01-.5-.5z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </button></div>
+            <div class="col-1"><button class="btn btn-block btn-warning allBtn" id="bMultiply">
+                    <svg class="bi bi-x" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M11.854 4.146a.5.5 0 010 .708l-7 7a.5.5 0 01-.708-.708l7-7a.5.5 0 01.708 0z"
+                            clip-rule="evenodd" />
+                        <path fill-rule="evenodd"
+                            d="M4.146 4.146a.5.5 0 000 .708l7 7a.5.5 0 00.708-.708l-7-7a.5.5 0 00-.708 0z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </button></div>
+        </div>
+        <!-- Buttons: 7, 8, 9, / -->
+        <div class="row justify-content-md-center pt-2">
+            <div class="col-1"><button class="btn btn-block btn-default allBtn" id="bSeven">7</button></div>
+            <div class="col-1"><button class="btn btn-block btn-default allBtn" id="bEight">8</button></div>
+            <div class="col-1"><button class="btn btn-block btn-default allBtn" id="bNine">9</button></div>
+            <div class="col-1"><button class="btn btn-block btn-warning allBtn" id="bDivide">
+                    <svg class="bi bi-slash" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M11.854 4.146a.5.5 0 010 .708l-7 7a.5.5 0 01-.708-.708l7-7a.5.5 0 01.708 0z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </button></div>
+        </div>
+        <!-- Buttons: 4, 5, 6, - -->
+        <div class="row justify-content-md-center pt-2">
+            <div class="col-1"><button class="btn btn-block btn-default allBtn" id="bFour">4</button></div>
+            <div class="col-1"><button class="btn btn-block btn-default allBtn" id="bFive">5</button></div>
+            <div class="col-1"><button class="btn btn-block btn-default allBtn" id="bSix">6</button></div>
+            <div class="col-1"><button class="btn btn-block btn-warning allBtn" id=bSubstract>-</button></div>
+        </div>
+        <!-- Buttons: 1, 2, 3, . -->
+        <div class="row justify-content-md-center pt-2">
+            <div class="col-1"><button class="btn btn-block btn-default allBtn" id="bOne">1</button></div>
+            <div class="col-1"><button class="btn btn-block btn-default allBtn" id="bTwo">2</button></div>
+            <div class="col-1"><button class="btn btn-block btn-default allBtn" id="bThree">3</button></div>
+            <div class="col-1"><button class="btn btn-block btn-warning allBtn" id="bPoint">.</button></div>
+        </div>
+        <!-- Buttons: 0, +, = -->
+        <div class="row justify-content-md-center pt-2">
+            <div class="col-1"><button class="btn btn-block btn-default allBtn" id="bZero">0</button></div>
+            <div class="col-1"><button class="btn btn-block btn-warning allBtn" id="bAdd">
+                    <svg class="bi bi-plus" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M8 3.5a.5.5 0 01.5.5v4a.5.5 0 01-.5.5H4a.5.5 0 010-1h3.5V4a.5.5 0 01.5-.5z"
+                            clip-rule="evenodd" />
+                        <path fill-rule="evenodd" d="M7.5 8a.5.5 0 01.5-.5h4a.5.5 0 010 1H8.5V12a.5.5 0 01-1 0V8z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </button></div>
+            <div class="col-2"><button class="btn btn-block btn-warning allBtn" id="bResult">=</button></div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="css/bootstrap-3.0.0-dist/js/bootstrap.min.js"></script>
+    <!-- Custom scripts -->
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

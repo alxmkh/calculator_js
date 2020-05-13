@@ -1,0 +1,25 @@
+.customHeader {
+    font-family: 'Monoton', cursive;
+}
+
+.allBtn {
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+#allInput {
+    text-align: right;
+    font-family: 'Roboto Slab', serif;
+    letter-spacing: 3px;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+#outputLine {
+    text-align: right;
+    font-family: 'Roboto Slab', serif;
+    letter-spacing: 3px;
+    height: 60px;
+    width: 347px;
+    border-radius: 5px;
+    border: none;
+
+}
